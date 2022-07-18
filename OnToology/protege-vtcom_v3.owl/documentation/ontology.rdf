@@ -1,0 +1,1198 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/vtcom#"
+     xml:base="https://w3id.org/def/vtcom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/def/vtcom">
+        <dc:creator>Esther Gómez Díaz</dc:creator>
+        <dc:description>El propósito principal de esta ontología: proporcionar un modelo de conocimiento consensuado en el dominio del alojamiento turístico que pueda ser usado por portales de reservas, propietarios de alojamientos y potenciales clientes de alquiler vacacional. Esta ontología se centra solo en el dominio del alojamiento turístico.</dc:description>
+        <dc:title>Alquiler de Viviendas Uso Turístico</dc:title>
+        <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontologies.sti-innsbruck.at/acco:hasFeatures -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontologies.sti-innsbruck.at/acco:hasFeatures">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:estáDisponible"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:range rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+        <rdfs:label>acco:hasFeatures</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontologies.sti-innsbruck.at/acco:acco:habitaciónHasFeatures -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontologies.sti-innsbruck.at/acco:acco:habitaciónHasFeatures">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:serviciosDisponibles"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Habitación"/>
+        <rdfs:range rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+        <rdfs:label>acco:habitaciónHasFeatures</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDuration -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasDuration">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom#dura"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <rdfs:label>time:hasDuration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#cobraComisión -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#cobraComisión">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom#esCobrada"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónOferta"/>
+        <rdfs:range rdf:resource="https://schema.org/PriceSpecification"/>
+        <dc:description>Un gestor cobra una comisión por ofertar viviendas turísticas a clientes.</dc:description>
+        <rdfs:label>cobraComisión</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#dura -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#dura">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:label>reservaDura</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#esCobrada -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#esCobrada">
+        <rdfs:domain rdf:resource="https://schema.org/PriceSpecification"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónOferta"/>
+        <rdfs:label>esCobrada</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#esGestionada -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#esGestionada">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom#gestiona"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vt#Gestor"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:label>esGestionada</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#esOfrecida -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#esOfrecida">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom#tieneVivienda"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónOferta"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <dc:description>Una vivienda Turística es ofrecida por un gestor a cllientes</dc:description>
+        <rdfs:label>esOfrecida</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#esPrecioReserva -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#esPrecioReserva">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom#reservaTienePrecio"/>
+        <rdfs:domain rdf:resource="https://schema.org/PriceSpecification"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:label>esPrecioReserva</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#esReservada -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#esReservada">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom#reservaTieneVivienda"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:label>esReservada</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#gestiona -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#gestiona">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vt#Gestor"/>
+        <dc:description>Un Gestor gestiona las reservas de viviendas de los clientes.</dc:description>
+        <rdfs:label>gestiona</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#oferta -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#oferta">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom#tieneGestor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vt#Gestor"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónOferta"/>
+        <dc:description>Un gestor oferta viviendas a los clientes</dc:description>
+        <rdfs:label>oferta</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#ofrece -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#ofrece">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom#tienePropietario"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vt#Propietario"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónOferta"/>
+        <dc:description>Un propietario ofrece una vivienda a un gestor para que sea ofertada a clientes.</dc:description>
+        <rdfs:label>ofrece</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#recibeOferta -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#recibeOferta">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom#tieneCliente"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Cliente"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónOferta"/>
+        <dc:description>Un clienterecibe ofertas de viviendas turísticas por parte de un Gestor.</dc:description>
+        <rdfs:label>recibeOferta</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#reserva -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#reserva">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom#reservaTieneCliente"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Cliente"/>
+        <dc:description>Un cliente reserva una vivienda como alojamiento turístico.</dc:description>
+        <rdfs:label>reserva</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#reservaTieneCliente -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#reservaTieneCliente">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Cliente"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:label>reservaTieneCliente</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#reservaTienePrecio -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#reservaTienePrecio">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:range rdf:resource="https://schema.org/PriceSpecification"/>
+        <rdfs:label>reservaTienePrecio</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#reservaTieneVivienda -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#reservaTieneVivienda">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:label>reservaTieneVivienda</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tieneCliente -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#tieneCliente">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónOferta"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Cliente"/>
+        <rdfs:label>tieneCliente</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tieneGestor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#tieneGestor">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónOferta"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vt#Gestor"/>
+        <rdfs:label>tieneGestor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tienePropietario -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#tienePropietario">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónOferta"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vt#Propietario"/>
+        <rdfs:label>tienePropietario</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tieneVivienda -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom#tieneVivienda">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónOferta"/>
+        <rdfs:label>tieneVivienda</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:alojamientoDura -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:alojamientoDura">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:alojamientoTieneDuración"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:label>alojamientoDura</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:alojamientoTieneDuración -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:alojamientoTieneDuración">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <rdfs:label>alojamientoTieneDuración</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:bañoPerteneceA -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:bañoPerteneceA">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:tieneBaño"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Baño"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Habitación"/>
+        <rdfs:label>bañoPerteneceA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:buscaVivienda -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:buscaVivienda">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:esBuscada"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Cliente"/>
+        <rdfs:label>buscaVivienda</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:camaPerteneceA -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:camaPerteneceA">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:tieneCama"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Cama"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Habitación"/>
+        <rdfs:label>camaPerteneceA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:esBuscada -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:esBuscada">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Cliente"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:label>esBuscada</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:esPresupuesto -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:esPresupuesto">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:tienePresupuesto"/>
+        <rdfs:domain rdf:resource="https://schema.org/PriceSpecification"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:label>esPresupuesto</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:estáDisponible -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:estáDisponible">
+        <rdfs:domain rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:label>viviendaDisponeDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:habitaciónPerteneceA -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:habitaciónPerteneceA">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:tieneHabitación"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Habitación"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:label>habitaciónPerteneceA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:parkingPerteneceA -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:parkingPerteneceA">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:tieneParking"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Parking"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:label>parkingPerteneceA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:plazaPerteneceA -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:plazaPerteneceA">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:tienePlaza"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#PlazaParking"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Parking"/>
+        <rdfs:label>plazaPerteneceA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:precioDeVivienda -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:precioDeVivienda">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:viviendaTienePrecio"/>
+        <rdfs:domain rdf:resource="https://schema.org/PriceSpecification"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:label>precioDeVivienda</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:prefiereUbicación -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:prefiereUbicación">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:ubicaciónPreferida"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:range rdf:resource="http://schema.org/address"/>
+        <rdfs:label>prefiereUbicación</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:serviciosDisponibles -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:serviciosDisponibles">
+        <rdfs:domain rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Habitación"/>
+        <rdfs:label>serviciosDisponibles</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:tieneBaño -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:tieneBaño">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Habitación"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Baño"/>
+        <rdfs:label>tieneBaño</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:tieneCama -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:tieneCama">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Habitación"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Cama"/>
+        <rdfs:label>tieneCama</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:tieneHabitación -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:tieneHabitación">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Habitación"/>
+        <rdfs:label>tieneHabitación</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:tieneParking -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:tieneParking">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#Parking"/>
+        <rdfs:label>tieneParking</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:tienePlaza -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:tienePlaza">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Parking"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#PlazaParking"/>
+        <rdfs:label>tienePlaza</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:tienePresupuesto -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:tienePresupuesto">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:range rdf:resource="https://schema.org/PriceSpecification"/>
+        <rdfs:label>tienePresupuesto</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:tieneUbicación -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:tieneUbicación">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtcom:ubicaciónDe"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <rdfs:label>tieneUbicación</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:ubicaciónDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:ubicaciónDe">
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:label>ubicaciónDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:ubicaciónPreferida -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:ubicaciónPreferida">
+        <rdfs:domain rdf:resource="http://schema.org/address"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:label>ubicaciónPreferida</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom:viviendaTienePrecio -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtcom:viviendaTienePrecio">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:range rdf:resource="https://schema.org/PriceSpecification"/>
+        <rdfs:label>viviendaTienePrecio</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/vtcom#fechaInicioBúsqueda -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#fechaInicioBúsqueda">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <dc:description>Fecha en la que el cliente desea iniciar su alojamiento.</dc:description>
+        <rdfs:label>fechaInicioBúsqueda</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#fechaInicioReserva -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#fechaInicioReserva">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <dc:description>Fecha en la que el Cliente iniciará su estancia en el alojamiento.</dc:description>
+        <rdfs:label>fechaInicioReserva</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#licenciaTurística -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#licenciaTurística">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Número de registro de la Vivienda.</dc:description>
+        <rdfs:label>licenciaTurística</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#númHabitacionesBúsqueda -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#númHabitacionesBúsqueda">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <dc:description>Número de habitaciones para las que el cliente busca alojamiento.</dc:description>
+        <rdfs:label>númHabitacionesBúsqueda</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#númHabitacionesReserva -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#númHabitacionesReserva">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <dc:description>Número de habitaciones reservadas por el Cliente.</dc:description>
+        <rdfs:label>númHabitacionesReserva</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#númPersonasBúsqueda -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#númPersonasBúsqueda">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <dc:description>Número de personas para las que el cliente busca alojamiento.</dc:description>
+        <rdfs:label>númPersonasBúsqueda</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#númPersonasReserva -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#númPersonasReserva">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónReserva"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <dc:description>Número de personas que se alojarán junto al cliente.</dc:description>
+        <rdfs:label>númPersonasReserva</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tamañoBaño -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#tamañoBaño">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Baño"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <dc:description>Tamaño del baño: 2,3,4 metros cuadrados.</dc:description>
+        <rdfs:label>tamañoBaño</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tamañoCama -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#tamañoCama">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Cama"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Tamaño de la cama: 90,135,160.</dc:description>
+        <rdfs:label>tamañoCama</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tamañoHabitación -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#tamañoHabitación">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Habitación"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <dc:description>Tamaño de la Habitación.</dc:description>
+        <rdfs:label>tamañoHabitación</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tamañoPlaza -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#tamañoPlaza">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#PlazaParking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <dc:description>Tamaño de la plaza:2,3,4 metros cuadrados.</dc:description>
+        <rdfs:label>tamañoPlaza</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tieneMascotas -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#tieneMascotas">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#RelaciónBúsqueda"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <dc:description>El cliente indica en la búsqueda de Vivienda si tiene o no mascotas.</dc:description>
+        <rdfs:label>tieneMascotas</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tipoBaño -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#tipoBaño">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Baño"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Aseo, Baño con ducha, Baño con bañera.</dc:description>
+        <rdfs:label>tipoBaño</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tipoCama -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#tipoCama">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Cama"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Individual, Doble, Sofá-cama.</dc:description>
+        <rdfs:label>tipoCama</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tipoHabitación -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#tipoHabitación">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#Habitación"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Individual, Doble, Suite.</dc:description>
+        <rdfs:label>tipoHabitación</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#tipoPlaza -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtcom#tipoPlaza">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtcom#PlazaParking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>tipoPlaza</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/acco/ns#AccomodationFeature -->
+
+
+    <owl:Class rdf:about="http://purl.org/acco/ns#AccomodationFeature">
+        <rdfs:label>acco:AccomodationFeature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/acco/ns#Apartment -->
+
+
+    <owl:Class rdf:about="http://purl.org/acco/ns#Apartment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:label>acco:Apartment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/acco/ns#House -->
+
+
+    <owl:Class rdf:about="http://purl.org/acco/ns#House">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"/>
+        <rdfs:label>acco:House</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/address -->
+
+
+    <owl:Class rdf:about="http://schema.org/address">
+        <rdfs:label>schema:address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Point -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+        <rdfs:label>geo:Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Duration -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Duration">
+        <rdfs:label>time:Duration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/PriceSpecification -->
+
+
+    <owl:Class rdf:about="https://schema.org/PriceSpecification">
+        <rdfs:label>schema:PriceSpecification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esdir:DirecciónPostal -->
+
+
+    <owl:Class rdf:about="https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esdir:DirecciónPostal">
+        <rdfs:subClassOf rdf:resource="http://schema.org/address"/>
+        <dc:description>Describe una dirección postal de España.</dc:description>
+        <rdfs:label>DirecciónPostal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vt#Gestor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vt#Gestor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/vt#Persona"/>
+        <dc:description>Representa al sujeto (persona física o jurídica) que explota
+comercialmente la vivienda. Propietario y Gestor firman
+un contrato de servicios que recoge los términos de su relación.</dc:description>
+        <rdfs:label>Gestor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vt#Persona -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vt#Persona">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:description>Representa al sujeto (persona física o jurídica) que alquila
+una vivienda turística.</dc:description>
+        <rdfs:label>Persona</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vt#Propietario -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vt#Propietario">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/vt#Persona"/>
+        <dc:description>Representa al sujeto (persona física o jurídica) que posee
+la vivienda.</dc:description>
+        <rdfs:label>Propietario</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vt#ViviendaTurística -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vt#ViviendaTurística">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>ViviendaTurística</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#Baño -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtcom#Baño">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtcom#tipoBaño"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtcom#tamañoBaño"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Una Vivienda Turística dispone de un número de baños de distintos tipos y tamaños.</dc:description>
+        <rdfs:label>Baño</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#Cama -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtcom#Cama">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtcom#tamañoCama"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtcom#tipoCama"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Una habitación de una Vivienda Turística dispone de un número de camas.</dc:description>
+        <rdfs:label>Cama</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#Cliente -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtcom#Cliente">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/vt#Persona"/>
+        <dc:description>Representa al sujeto (persona física o jurídica) que alquila
+una vivienda turística.</dc:description>
+        <rdfs:label>Cliente</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#Habitación -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtcom#Habitación">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtcom#tamañoHabitación"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtcom#tipoHabitación"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Una Vivienda Turística dispone de un número de habitaciones de distintos tipos y tamaños.</dc:description>
+        <rdfs:label>Habitación</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#Parking -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtcom#Parking">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtcom#tamañoPlaza"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtcom#tipoPlaza"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Una Vivienda Turística dispone o no de garaje.</dc:description>
+        <rdfs:label>Parking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#PlazaParking -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtcom#PlazaParking">
+        <dc:description>Una Vivienda Turística con Parking dispone de un número de plazas de un tipo y tamaño.</dc:description>
+        <rdfs:label>PlazaParking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#RelaciónBúsqueda -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtcom#RelaciónBúsqueda">
+        <dc:description>Relación n-aria entre un Cliente y una Vivienda Turística con objeto de localizar una vivienda que satidfaga las necesidades del cliente.</dc:description>
+        <rdfs:label>RelaciónBúsqueda</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#RelaciónOferta -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtcom#RelaciónOferta">
+        <dc:description>Relación n-aria entre un Gestor, un Cliente y una Vivienda Turística que permite al Gestor ofertar ua Vivienda a los clientes.</dc:description>
+        <rdfs:label>RelaciónOferta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#RelaciónReserva -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtcom#RelaciónReserva">
+        <dc:description>Relación n-aria entre un Cliente, un Gestor y una Vivienda Turística que permite que un cliente reserve una vivienda turística para pasar sus vacaciones.</dc:description>
+        <rdfs:label>RelaciónReserva</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#ViviendaAlquilerTurístico -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtcom#ViviendaAlquilerTurístico">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/vt#ViviendaTurística"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtcom#licenciaTurística"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Representa el establecimiento objeto de alquiler que posee
+una licencia turística.</dc:description>
+        <rdfs:label>ViviendaAlquilerTurístico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/vtcom#LUGARESCERCANOS -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtcom#LUGARESCERCANOS">
+        <rdf:type rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#MASCOTAS -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtcom#MASCOTAS">
+        <rdf:type rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#PADDEL -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtcom#PADDEL">
+        <rdf:type rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#PARQUEINFANTIL -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtcom#PARQUEINFANTIL">
+        <rdf:type rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#PISCINA -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtcom#PISCINA">
+        <rdf:type rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#VISTASMAR -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtcom#VISTASMAR">
+        <rdf:type rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtcom#WI-FI -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtcom#WI-FI">
+        <rdf:type rdf:resource="http://purl.org/acco/ns#AccomodationFeature"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

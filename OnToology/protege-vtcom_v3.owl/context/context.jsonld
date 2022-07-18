@@ -1,0 +1,339 @@
+{
+  "@context" : {
+    "esOfrecida" : {
+      "@id" : "https://w3id.org/def/vtcom#esOfrecida",
+      "@type" : "@id"
+    },
+    "tienePropietario" : {
+      "@id" : "https://w3id.org/def/vtcom#tienePropietario",
+      "@type" : "@id"
+    },
+    "esBuscada" : {
+      "@id" : "https://w3id.org/def/vtcom:esBuscada",
+      "@type" : "@id"
+    },
+    "tieneCama" : {
+      "@id" : "https://w3id.org/def/vtcom:tieneCama",
+      "@type" : "@id"
+    },
+    "tieneBaño" : {
+      "@id" : "https://w3id.org/def/vtcom:tieneBaño",
+      "@type" : "@id"
+    },
+    "Baño" : {
+      "@id" : "https://w3id.org/def/vtcom#Baño"
+    },
+    "esPresupuesto" : {
+      "@id" : "https://w3id.org/def/vtcom:esPresupuesto",
+      "@type" : "@id"
+    },
+    "estáDisponible" : {
+      "@id" : "https://w3id.org/def/vtcom:estáDisponible",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "tieneHabitación" : {
+      "@id" : "https://w3id.org/def/vtcom:tieneHabitación",
+      "@type" : "@id"
+    },
+    "Cama" : {
+      "@id" : "https://w3id.org/def/vtcom#Cama"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "tamañoPlaza" : {
+      "@id" : "https://w3id.org/def/vtcom#tamañoPlaza",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "esGestionada" : {
+      "@id" : "https://w3id.org/def/vtcom#esGestionada",
+      "@type" : "@id"
+    },
+    "ofrece" : {
+      "@id" : "https://w3id.org/def/vtcom#ofrece",
+      "@type" : "@id"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "precioDeVivienda" : {
+      "@id" : "https://w3id.org/def/vtcom:precioDeVivienda",
+      "@type" : "@id"
+    },
+    "fechaInicioBúsqueda" : {
+      "@id" : "https://w3id.org/def/vtcom#fechaInicioBúsqueda",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "reservaTienePrecio" : {
+      "@id" : "https://w3id.org/def/vtcom#reservaTienePrecio",
+      "@type" : "@id"
+    },
+    "House" : {
+      "@id" : "http://purl.org/acco/ns#House"
+    },
+    "viviendaTienePrecio" : {
+      "@id" : "https://w3id.org/def/vtcom:viviendaTienePrecio",
+      "@type" : "@id"
+    },
+    "tipoCama" : {
+      "@id" : "https://w3id.org/def/vtcom#tipoCama",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "esPrecioReserva" : {
+      "@id" : "https://w3id.org/def/vtcom#esPrecioReserva",
+      "@type" : "@id"
+    },
+    "númPersonasBúsqueda" : {
+      "@id" : "https://w3id.org/def/vtcom#númPersonasBúsqueda",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "ViviendaTurística" : {
+      "@id" : "https://w3id.org/def/vt#ViviendaTurística"
+    },
+    "parkingPerteneceA" : {
+      "@id" : "https://w3id.org/def/vtcom:parkingPerteneceA",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "serviciosDisponibles" : {
+      "@id" : "https://w3id.org/def/vtcom:serviciosDisponibles",
+      "@type" : "@id"
+    },
+    "reservaTieneVivienda" : {
+      "@id" : "https://w3id.org/def/vtcom#reservaTieneVivienda",
+      "@type" : "@id"
+    },
+    "RelaciónBúsqueda" : {
+      "@id" : "https://w3id.org/def/vtcom#RelaciónBúsqueda"
+    },
+    "RelaciónOferta" : {
+      "@id" : "https://w3id.org/def/vtcom#RelaciónOferta"
+    },
+    "tienePresupuesto" : {
+      "@id" : "https://w3id.org/def/vtcom:tienePresupuesto",
+      "@type" : "@id"
+    },
+    "tamañoCama" : {
+      "@id" : "https://w3id.org/def/vtcom#tamañoCama",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "licenciaTurística" : {
+      "@id" : "https://w3id.org/def/vtcom#licenciaTurística",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "reservaTieneCliente" : {
+      "@id" : "https://w3id.org/def/vtcom#reservaTieneCliente",
+      "@type" : "@id"
+    },
+    "ViviendaAlquilerTurístico" : {
+      "@id" : "https://w3id.org/def/vtcom#ViviendaAlquilerTurístico"
+    },
+    "bañoPerteneceA" : {
+      "@id" : "https://w3id.org/def/vtcom:bañoPerteneceA",
+      "@type" : "@id"
+    },
+    "Cliente" : {
+      "@id" : "https://w3id.org/def/vtcom#Cliente"
+    },
+    "tieneCliente" : {
+      "@id" : "https://w3id.org/def/vtcom#tieneCliente",
+      "@type" : "@id"
+    },
+    "Habitación" : {
+      "@id" : "https://w3id.org/def/vtcom#Habitación"
+    },
+    "hasDuration" : {
+      "@id" : "http://www.w3.org/2006/time#hasDuration",
+      "@type" : "@id"
+    },
+    "tieneGestor" : {
+      "@id" : "https://w3id.org/def/vtcom#tieneGestor",
+      "@type" : "@id"
+    },
+    "tieneMascotas" : {
+      "@id" : "https://w3id.org/def/vtcom#tieneMascotas",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ubicaciónPreferida" : {
+      "@id" : "https://w3id.org/def/vtcom:ubicaciónPreferida",
+      "@type" : "@id"
+    },
+    "Propietario" : {
+      "@id" : "https://w3id.org/def/vt#Propietario"
+    },
+    "Persona" : {
+      "@id" : "https://w3id.org/def/vt#Persona"
+    },
+    "hasFeatures" : {
+      "@id" : "http://ontologies.sti-innsbruck.at/acco:hasFeatures",
+      "@type" : "@id"
+    },
+    "fechaInicioReserva" : {
+      "@id" : "https://w3id.org/def/vtcom#fechaInicioReserva",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "Gestor" : {
+      "@id" : "https://w3id.org/def/vt#Gestor"
+    },
+    "esCobrada" : {
+      "@id" : "https://w3id.org/def/vtcom#esCobrada",
+      "@type" : "@id"
+    },
+    "address" : {
+      "@id" : "http://schema.org/address"
+    },
+    "reserva" : {
+      "@id" : "https://w3id.org/def/vtcom#reserva",
+      "@type" : "@id"
+    },
+    "PlazaParking" : {
+      "@id" : "https://w3id.org/def/vtcom#PlazaParking"
+    },
+    "habitaciónHasFeatures" : {
+      "@id" : "http://ontologies.sti-innsbruck.at/acco:acco:habitaciónHasFeatures",
+      "@type" : "@id"
+    },
+    "alojamientoTieneDuración" : {
+      "@id" : "https://w3id.org/def/vtcom:alojamientoTieneDuración",
+      "@type" : "@id"
+    },
+    "alojamientoDura" : {
+      "@id" : "https://w3id.org/def/vtcom:alojamientoDura",
+      "@type" : "@id"
+    },
+    "Duration" : {
+      "@id" : "http://www.w3.org/2006/time#Duration"
+    },
+    "Point" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+    },
+    "prefiereUbicación" : {
+      "@id" : "https://w3id.org/def/vtcom:prefiereUbicación",
+      "@type" : "@id"
+    },
+    "ubicaciónDe" : {
+      "@id" : "https://w3id.org/def/vtcom:ubicaciónDe",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "dura" : {
+      "@id" : "https://w3id.org/def/vtcom#dura",
+      "@type" : "@id"
+    },
+    "plazaPerteneceA" : {
+      "@id" : "https://w3id.org/def/vtcom:plazaPerteneceA",
+      "@type" : "@id"
+    },
+    "Parking" : {
+      "@id" : "https://w3id.org/def/vtcom#Parking"
+    },
+    "tieneVivienda" : {
+      "@id" : "https://w3id.org/def/vtcom#tieneVivienda",
+      "@type" : "@id"
+    },
+    "Apartment" : {
+      "@id" : "http://purl.org/acco/ns#Apartment"
+    },
+    "DirecciónPostal" : {
+      "@id" : "https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esdir:DirecciónPostal"
+    },
+    "AccomodationFeature" : {
+      "@id" : "http://purl.org/acco/ns#AccomodationFeature"
+    },
+    "gestiona" : {
+      "@id" : "https://w3id.org/def/vtcom#gestiona",
+      "@type" : "@id"
+    },
+    "PriceSpecification" : {
+      "@id" : "https://schema.org/PriceSpecification"
+    },
+    "buscaVivienda" : {
+      "@id" : "https://w3id.org/def/vtcom:buscaVivienda",
+      "@type" : "@id"
+    },
+    "cobraComisión" : {
+      "@id" : "https://w3id.org/def/vtcom#cobraComisión",
+      "@type" : "@id"
+    },
+    "tienePlaza" : {
+      "@id" : "https://w3id.org/def/vtcom:tienePlaza",
+      "@type" : "@id"
+    },
+    "RelaciónReserva" : {
+      "@id" : "https://w3id.org/def/vtcom#RelaciónReserva"
+    },
+    "tieneUbicación" : {
+      "@id" : "https://w3id.org/def/vtcom:tieneUbicación",
+      "@type" : "@id"
+    },
+    "tamañoBaño" : {
+      "@id" : "https://w3id.org/def/vtcom#tamañoBaño",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "recibeOferta" : {
+      "@id" : "https://w3id.org/def/vtcom#recibeOferta",
+      "@type" : "@id"
+    },
+    "camaPerteneceA" : {
+      "@id" : "https://w3id.org/def/vtcom:camaPerteneceA",
+      "@type" : "@id"
+    },
+    "habitaciónPerteneceA" : {
+      "@id" : "https://w3id.org/def/vtcom:habitaciónPerteneceA",
+      "@type" : "@id"
+    },
+    "tamañoHabitación" : {
+      "@id" : "https://w3id.org/def/vtcom#tamañoHabitación",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "oferta" : {
+      "@id" : "https://w3id.org/def/vtcom#oferta",
+      "@type" : "@id"
+    },
+    "tipoPlaza" : {
+      "@id" : "https://w3id.org/def/vtcom#tipoPlaza",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tipoBaño" : {
+      "@id" : "https://w3id.org/def/vtcom#tipoBaño",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tieneParking" : {
+      "@id" : "https://w3id.org/def/vtcom:tieneParking",
+      "@type" : "@id"
+    },
+    "númPersonasReserva" : {
+      "@id" : "https://w3id.org/def/vtcom#númPersonasReserva",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "númHabitacionesBúsqueda" : {
+      "@id" : "https://w3id.org/def/vtcom#númHabitacionesBúsqueda",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "esReservada" : {
+      "@id" : "https://w3id.org/def/vtcom#esReservada",
+      "@type" : "@id"
+    },
+    "tipoHabitación" : {
+      "@id" : "https://w3id.org/def/vtcom#tipoHabitación",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "númHabitacionesReserva" : {
+      "@id" : "https://w3id.org/def/vtcom#númHabitacionesReserva",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    }
+  }
+}
