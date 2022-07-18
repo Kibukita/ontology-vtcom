@@ -1,0 +1,667 @@
+<https://w3id.org/def/vtcom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/vtcom> <http://purl.org/dc/elements/1.1/creator> "Esther Gómez Díaz" .
+<https://w3id.org/def/vtcom> <http://purl.org/dc/elements/1.1/description> "El propósito principal de esta ontología: proporcionar un modelo de conocimiento consensuado en el dominio del alojamiento turístico que pueda ser usado por portales de reservas, propietarios de alojamientos y potenciales clientes de alquiler vacacional. Esta ontología se centra solo en el dominio del alojamiento turístico." .
+<https://w3id.org/def/vtcom> <http://purl.org/dc/elements/1.1/title> "Alquiler de Viviendas Uso Turístico" .
+<https://w3id.org/def/vtcom> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
+<https://w3id.org/def/vtcom> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://ontologies.sti-innsbruck.at/acco:hasFeatures
+<http://ontologies.sti-innsbruck.at/acco:hasFeatures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontologies.sti-innsbruck.at/acco:hasFeatures> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:estáDisponible> .
+<http://ontologies.sti-innsbruck.at/acco:hasFeatures> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<http://ontologies.sti-innsbruck.at/acco:hasFeatures> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/acco/ns#AccomodationFeature> .
+<http://ontologies.sti-innsbruck.at/acco:hasFeatures> <http://www.w3.org/2000/01/rdf-schema#label> "acco:hasFeatures" .
+# 
+# http://ontologies.sti-innsbruck.at/acco:acco:habitaciónHasFeatures
+<http://ontologies.sti-innsbruck.at/acco:acco:habitaciónHasFeatures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontologies.sti-innsbruck.at/acco:acco:habitaciónHasFeatures> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:serviciosDisponibles> .
+<http://ontologies.sti-innsbruck.at/acco:acco:habitaciónHasFeatures> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Habitación> .
+<http://ontologies.sti-innsbruck.at/acco:acco:habitaciónHasFeatures> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/acco/ns#AccomodationFeature> .
+<http://ontologies.sti-innsbruck.at/acco:acco:habitaciónHasFeatures> <http://www.w3.org/2000/01/rdf-schema#label> "acco:habitaciónHasFeatures" .
+# 
+# http://www.w3.org/2006/time#hasDuration
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom#dura> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Duration> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#label> "time:hasDuration" .
+# 
+# https://w3id.org/def/vtcom#cobraComisión
+<https://w3id.org/def/vtcom#cobraComisión> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#cobraComisión> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom#esCobrada> .
+<https://w3id.org/def/vtcom#cobraComisión> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónOferta> .
+<https://w3id.org/def/vtcom#cobraComisión> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/PriceSpecification> .
+<https://w3id.org/def/vtcom#cobraComisión> <http://purl.org/dc/elements/1.1/description> "Un gestor cobra una comisión por ofertar viviendas turísticas a clientes." .
+<https://w3id.org/def/vtcom#cobraComisión> <http://www.w3.org/2000/01/rdf-schema#label> "cobraComisión" .
+# 
+# https://w3id.org/def/vtcom#dura
+<https://w3id.org/def/vtcom#dura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#dura> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#Duration> .
+<https://w3id.org/def/vtcom#dura> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#dura> <http://www.w3.org/2000/01/rdf-schema#label> "reservaDura" .
+# 
+# https://w3id.org/def/vtcom#esCobrada
+<https://w3id.org/def/vtcom#esCobrada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#esCobrada> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/PriceSpecification> .
+<https://w3id.org/def/vtcom#esCobrada> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónOferta> .
+<https://w3id.org/def/vtcom#esCobrada> <http://www.w3.org/2000/01/rdf-schema#label> "esCobrada" .
+# 
+# https://w3id.org/def/vtcom#esGestionada
+<https://w3id.org/def/vtcom#esGestionada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#esGestionada> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom#gestiona> .
+<https://w3id.org/def/vtcom#esGestionada> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Gestor> .
+<https://w3id.org/def/vtcom#esGestionada> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#esGestionada> <http://www.w3.org/2000/01/rdf-schema#label> "esGestionada" .
+# 
+# https://w3id.org/def/vtcom#esOfrecida
+<https://w3id.org/def/vtcom#esOfrecida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#esOfrecida> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom#tieneVivienda> .
+<https://w3id.org/def/vtcom#esOfrecida> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónOferta> .
+<https://w3id.org/def/vtcom#esOfrecida> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom#esOfrecida> <http://purl.org/dc/elements/1.1/description> "Una vivienda Turística es ofrecida por un gestor a cllientes" .
+<https://w3id.org/def/vtcom#esOfrecida> <http://www.w3.org/2000/01/rdf-schema#label> "esOfrecida" .
+# 
+# https://w3id.org/def/vtcom#esPrecioReserva
+<https://w3id.org/def/vtcom#esPrecioReserva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#esPrecioReserva> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom#reservaTienePrecio> .
+<https://w3id.org/def/vtcom#esPrecioReserva> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/PriceSpecification> .
+<https://w3id.org/def/vtcom#esPrecioReserva> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#esPrecioReserva> <http://www.w3.org/2000/01/rdf-schema#label> "esPrecioReserva" .
+# 
+# https://w3id.org/def/vtcom#esReservada
+<https://w3id.org/def/vtcom#esReservada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#esReservada> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom#reservaTieneVivienda> .
+<https://w3id.org/def/vtcom#esReservada> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#esReservada> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom#esReservada> <http://www.w3.org/2000/01/rdf-schema#label> "esReservada" .
+# 
+# https://w3id.org/def/vtcom#gestiona
+<https://w3id.org/def/vtcom#gestiona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#gestiona> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#gestiona> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Gestor> .
+<https://w3id.org/def/vtcom#gestiona> <http://purl.org/dc/elements/1.1/description> "Un Gestor gestiona las reservas de viviendas de los clientes." .
+<https://w3id.org/def/vtcom#gestiona> <http://www.w3.org/2000/01/rdf-schema#label> "gestiona" .
+# 
+# https://w3id.org/def/vtcom#oferta
+<https://w3id.org/def/vtcom#oferta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#oferta> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom#tieneGestor> .
+<https://w3id.org/def/vtcom#oferta> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Gestor> .
+<https://w3id.org/def/vtcom#oferta> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónOferta> .
+<https://w3id.org/def/vtcom#oferta> <http://purl.org/dc/elements/1.1/description> "Un gestor oferta viviendas a los clientes" .
+<https://w3id.org/def/vtcom#oferta> <http://www.w3.org/2000/01/rdf-schema#label> "oferta" .
+# 
+# https://w3id.org/def/vtcom#ofrece
+<https://w3id.org/def/vtcom#ofrece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#ofrece> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom#tienePropietario> .
+<https://w3id.org/def/vtcom#ofrece> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Propietario> .
+<https://w3id.org/def/vtcom#ofrece> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónOferta> .
+<https://w3id.org/def/vtcom#ofrece> <http://purl.org/dc/elements/1.1/description> "Un propietario ofrece una vivienda a un gestor para que sea ofertada a clientes." .
+<https://w3id.org/def/vtcom#ofrece> <http://www.w3.org/2000/01/rdf-schema#label> "ofrece" .
+# 
+# https://w3id.org/def/vtcom#recibeOferta
+<https://w3id.org/def/vtcom#recibeOferta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#recibeOferta> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom#tieneCliente> .
+<https://w3id.org/def/vtcom#recibeOferta> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Cliente> .
+<https://w3id.org/def/vtcom#recibeOferta> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónOferta> .
+<https://w3id.org/def/vtcom#recibeOferta> <http://purl.org/dc/elements/1.1/description> "Un clienterecibe ofertas de viviendas turísticas por parte de un Gestor." .
+<https://w3id.org/def/vtcom#recibeOferta> <http://www.w3.org/2000/01/rdf-schema#label> "recibeOferta" .
+# 
+# https://w3id.org/def/vtcom#reserva
+<https://w3id.org/def/vtcom#reserva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#reserva> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom#reservaTieneCliente> .
+<https://w3id.org/def/vtcom#reserva> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#reserva> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Cliente> .
+<https://w3id.org/def/vtcom#reserva> <http://purl.org/dc/elements/1.1/description> "Un cliente reserva una vivienda como alojamiento turístico." .
+<https://w3id.org/def/vtcom#reserva> <http://www.w3.org/2000/01/rdf-schema#label> "reserva" .
+# 
+# https://w3id.org/def/vtcom#reservaTieneCliente
+<https://w3id.org/def/vtcom#reservaTieneCliente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#reservaTieneCliente> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Cliente> .
+<https://w3id.org/def/vtcom#reservaTieneCliente> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#reservaTieneCliente> <http://www.w3.org/2000/01/rdf-schema#label> "reservaTieneCliente" .
+# 
+# https://w3id.org/def/vtcom#reservaTienePrecio
+<https://w3id.org/def/vtcom#reservaTienePrecio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#reservaTienePrecio> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#reservaTienePrecio> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/PriceSpecification> .
+<https://w3id.org/def/vtcom#reservaTienePrecio> <http://www.w3.org/2000/01/rdf-schema#label> "reservaTienePrecio" .
+# 
+# https://w3id.org/def/vtcom#reservaTieneVivienda
+<https://w3id.org/def/vtcom#reservaTieneVivienda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#reservaTieneVivienda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom#reservaTieneVivienda> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#reservaTieneVivienda> <http://www.w3.org/2000/01/rdf-schema#label> "reservaTieneVivienda" .
+# 
+# https://w3id.org/def/vtcom#tieneCliente
+<https://w3id.org/def/vtcom#tieneCliente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#tieneCliente> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónOferta> .
+<https://w3id.org/def/vtcom#tieneCliente> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Cliente> .
+<https://w3id.org/def/vtcom#tieneCliente> <http://www.w3.org/2000/01/rdf-schema#label> "tieneCliente" .
+# 
+# https://w3id.org/def/vtcom#tieneGestor
+<https://w3id.org/def/vtcom#tieneGestor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#tieneGestor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónOferta> .
+<https://w3id.org/def/vtcom#tieneGestor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Gestor> .
+<https://w3id.org/def/vtcom#tieneGestor> <http://www.w3.org/2000/01/rdf-schema#label> "tieneGestor" .
+# 
+# https://w3id.org/def/vtcom#tienePropietario
+<https://w3id.org/def/vtcom#tienePropietario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#tienePropietario> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónOferta> .
+<https://w3id.org/def/vtcom#tienePropietario> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Propietario> .
+<https://w3id.org/def/vtcom#tienePropietario> <http://www.w3.org/2000/01/rdf-schema#label> "tienePropietario" .
+# 
+# https://w3id.org/def/vtcom#tieneVivienda
+<https://w3id.org/def/vtcom#tieneVivienda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom#tieneVivienda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom#tieneVivienda> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónOferta> .
+<https://w3id.org/def/vtcom#tieneVivienda> <http://www.w3.org/2000/01/rdf-schema#label> "tieneVivienda" .
+# 
+# https://w3id.org/def/vtcom:alojamientoDura
+<https://w3id.org/def/vtcom:alojamientoDura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:alojamientoDura> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:alojamientoTieneDuración> .
+<https://w3id.org/def/vtcom:alojamientoDura> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#Duration> .
+<https://w3id.org/def/vtcom:alojamientoDura> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom:alojamientoDura> <http://www.w3.org/2000/01/rdf-schema#label> "alojamientoDura" .
+# 
+# https://w3id.org/def/vtcom:alojamientoTieneDuración
+<https://w3id.org/def/vtcom:alojamientoTieneDuración> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:alojamientoTieneDuración> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom:alojamientoTieneDuración> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Duration> .
+<https://w3id.org/def/vtcom:alojamientoTieneDuración> <http://www.w3.org/2000/01/rdf-schema#label> "alojamientoTieneDuración" .
+# 
+# https://w3id.org/def/vtcom:bañoPerteneceA
+<https://w3id.org/def/vtcom:bañoPerteneceA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:bañoPerteneceA> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:tieneBaño> .
+<https://w3id.org/def/vtcom:bañoPerteneceA> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Baño> .
+<https://w3id.org/def/vtcom:bañoPerteneceA> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Habitación> .
+<https://w3id.org/def/vtcom:bañoPerteneceA> <http://www.w3.org/2000/01/rdf-schema#label> "bañoPerteneceA" .
+# 
+# https://w3id.org/def/vtcom:buscaVivienda
+<https://w3id.org/def/vtcom:buscaVivienda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:buscaVivienda> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:esBuscada> .
+<https://w3id.org/def/vtcom:buscaVivienda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom:buscaVivienda> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Cliente> .
+<https://w3id.org/def/vtcom:buscaVivienda> <http://www.w3.org/2000/01/rdf-schema#label> "buscaVivienda" .
+# 
+# https://w3id.org/def/vtcom:camaPerteneceA
+<https://w3id.org/def/vtcom:camaPerteneceA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:camaPerteneceA> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:tieneCama> .
+<https://w3id.org/def/vtcom:camaPerteneceA> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Cama> .
+<https://w3id.org/def/vtcom:camaPerteneceA> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Habitación> .
+<https://w3id.org/def/vtcom:camaPerteneceA> <http://www.w3.org/2000/01/rdf-schema#label> "camaPerteneceA" .
+# 
+# https://w3id.org/def/vtcom:esBuscada
+<https://w3id.org/def/vtcom:esBuscada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:esBuscada> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Cliente> .
+<https://w3id.org/def/vtcom:esBuscada> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom:esBuscada> <http://www.w3.org/2000/01/rdf-schema#label> "esBuscada" .
+# 
+# https://w3id.org/def/vtcom:esPresupuesto
+<https://w3id.org/def/vtcom:esPresupuesto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:esPresupuesto> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:tienePresupuesto> .
+<https://w3id.org/def/vtcom:esPresupuesto> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/PriceSpecification> .
+<https://w3id.org/def/vtcom:esPresupuesto> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom:esPresupuesto> <http://www.w3.org/2000/01/rdf-schema#label> "esPresupuesto" .
+# 
+# https://w3id.org/def/vtcom:estáDisponible
+<https://w3id.org/def/vtcom:estáDisponible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:estáDisponible> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/acco/ns#AccomodationFeature> .
+<https://w3id.org/def/vtcom:estáDisponible> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom:estáDisponible> <http://www.w3.org/2000/01/rdf-schema#label> "viviendaDisponeDe" .
+# 
+# https://w3id.org/def/vtcom:habitaciónPerteneceA
+<https://w3id.org/def/vtcom:habitaciónPerteneceA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:habitaciónPerteneceA> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:tieneHabitación> .
+<https://w3id.org/def/vtcom:habitaciónPerteneceA> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Habitación> .
+<https://w3id.org/def/vtcom:habitaciónPerteneceA> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom:habitaciónPerteneceA> <http://www.w3.org/2000/01/rdf-schema#label> "habitaciónPerteneceA" .
+# 
+# https://w3id.org/def/vtcom:parkingPerteneceA
+<https://w3id.org/def/vtcom:parkingPerteneceA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:parkingPerteneceA> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:tieneParking> .
+<https://w3id.org/def/vtcom:parkingPerteneceA> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Parking> .
+<https://w3id.org/def/vtcom:parkingPerteneceA> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom:parkingPerteneceA> <http://www.w3.org/2000/01/rdf-schema#label> "parkingPerteneceA" .
+# 
+# https://w3id.org/def/vtcom:plazaPerteneceA
+<https://w3id.org/def/vtcom:plazaPerteneceA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:plazaPerteneceA> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:tienePlaza> .
+<https://w3id.org/def/vtcom:plazaPerteneceA> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#PlazaParking> .
+<https://w3id.org/def/vtcom:plazaPerteneceA> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Parking> .
+<https://w3id.org/def/vtcom:plazaPerteneceA> <http://www.w3.org/2000/01/rdf-schema#label> "plazaPerteneceA" .
+# 
+# https://w3id.org/def/vtcom:precioDeVivienda
+<https://w3id.org/def/vtcom:precioDeVivienda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:precioDeVivienda> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:viviendaTienePrecio> .
+<https://w3id.org/def/vtcom:precioDeVivienda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/PriceSpecification> .
+<https://w3id.org/def/vtcom:precioDeVivienda> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom:precioDeVivienda> <http://www.w3.org/2000/01/rdf-schema#label> "precioDeVivienda" .
+# 
+# https://w3id.org/def/vtcom:prefiereUbicación
+<https://w3id.org/def/vtcom:prefiereUbicación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:prefiereUbicación> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:ubicaciónPreferida> .
+<https://w3id.org/def/vtcom:prefiereUbicación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom:prefiereUbicación> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/address> .
+<https://w3id.org/def/vtcom:prefiereUbicación> <http://www.w3.org/2000/01/rdf-schema#label> "prefiereUbicación" .
+# 
+# https://w3id.org/def/vtcom:serviciosDisponibles
+<https://w3id.org/def/vtcom:serviciosDisponibles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:serviciosDisponibles> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/acco/ns#AccomodationFeature> .
+<https://w3id.org/def/vtcom:serviciosDisponibles> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Habitación> .
+<https://w3id.org/def/vtcom:serviciosDisponibles> <http://www.w3.org/2000/01/rdf-schema#label> "serviciosDisponibles" .
+# 
+# https://w3id.org/def/vtcom:tieneBaño
+<https://w3id.org/def/vtcom:tieneBaño> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:tieneBaño> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Habitación> .
+<https://w3id.org/def/vtcom:tieneBaño> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Baño> .
+<https://w3id.org/def/vtcom:tieneBaño> <http://www.w3.org/2000/01/rdf-schema#label> "tieneBaño" .
+# 
+# https://w3id.org/def/vtcom:tieneCama
+<https://w3id.org/def/vtcom:tieneCama> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:tieneCama> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Habitación> .
+<https://w3id.org/def/vtcom:tieneCama> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Cama> .
+<https://w3id.org/def/vtcom:tieneCama> <http://www.w3.org/2000/01/rdf-schema#label> "tieneCama" .
+# 
+# https://w3id.org/def/vtcom:tieneHabitación
+<https://w3id.org/def/vtcom:tieneHabitación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:tieneHabitación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom:tieneHabitación> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Habitación> .
+<https://w3id.org/def/vtcom:tieneHabitación> <http://www.w3.org/2000/01/rdf-schema#label> "tieneHabitación" .
+# 
+# https://w3id.org/def/vtcom:tieneParking
+<https://w3id.org/def/vtcom:tieneParking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:tieneParking> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom:tieneParking> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#Parking> .
+<https://w3id.org/def/vtcom:tieneParking> <http://www.w3.org/2000/01/rdf-schema#label> "tieneParking" .
+# 
+# https://w3id.org/def/vtcom:tienePlaza
+<https://w3id.org/def/vtcom:tienePlaza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:tienePlaza> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Parking> .
+<https://w3id.org/def/vtcom:tienePlaza> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#PlazaParking> .
+<https://w3id.org/def/vtcom:tienePlaza> <http://www.w3.org/2000/01/rdf-schema#label> "tienePlaza" .
+# 
+# https://w3id.org/def/vtcom:tienePresupuesto
+<https://w3id.org/def/vtcom:tienePresupuesto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:tienePresupuesto> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom:tienePresupuesto> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/PriceSpecification> .
+<https://w3id.org/def/vtcom:tienePresupuesto> <http://www.w3.org/2000/01/rdf-schema#label> "tienePresupuesto" .
+# 
+# https://w3id.org/def/vtcom:tieneUbicación
+<https://w3id.org/def/vtcom:tieneUbicación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:tieneUbicación> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtcom:ubicaciónDe> .
+<https://w3id.org/def/vtcom:tieneUbicación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom:tieneUbicación> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+<https://w3id.org/def/vtcom:tieneUbicación> <http://www.w3.org/2000/01/rdf-schema#label> "tieneUbicación" .
+# 
+# https://w3id.org/def/vtcom:ubicaciónDe
+<https://w3id.org/def/vtcom:ubicaciónDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:ubicaciónDe> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+<https://w3id.org/def/vtcom:ubicaciónDe> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom:ubicaciónDe> <http://www.w3.org/2000/01/rdf-schema#label> "ubicaciónDe" .
+# 
+# https://w3id.org/def/vtcom:ubicaciónPreferida
+<https://w3id.org/def/vtcom:ubicaciónPreferida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:ubicaciónPreferida> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/address> .
+<https://w3id.org/def/vtcom:ubicaciónPreferida> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom:ubicaciónPreferida> <http://www.w3.org/2000/01/rdf-schema#label> "ubicaciónPreferida" .
+# 
+# https://w3id.org/def/vtcom:viviendaTienePrecio
+<https://w3id.org/def/vtcom:viviendaTienePrecio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtcom:viviendaTienePrecio> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom:viviendaTienePrecio> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/PriceSpecification> .
+<https://w3id.org/def/vtcom:viviendaTienePrecio> <http://www.w3.org/2000/01/rdf-schema#label> "viviendaTienePrecio" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/vtcom#fechaInicioBúsqueda
+<https://w3id.org/def/vtcom#fechaInicioBúsqueda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#fechaInicioBúsqueda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom#fechaInicioBúsqueda> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/vtcom#fechaInicioBúsqueda> <http://purl.org/dc/elements/1.1/description> "Fecha en la que el cliente desea iniciar su alojamiento." .
+<https://w3id.org/def/vtcom#fechaInicioBúsqueda> <http://www.w3.org/2000/01/rdf-schema#label> "fechaInicioBúsqueda" .
+# 
+# https://w3id.org/def/vtcom#fechaInicioReserva
+<https://w3id.org/def/vtcom#fechaInicioReserva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#fechaInicioReserva> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#fechaInicioReserva> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/vtcom#fechaInicioReserva> <http://purl.org/dc/elements/1.1/description> "Fecha en la que el Cliente iniciará su estancia en el alojamiento." .
+<https://w3id.org/def/vtcom#fechaInicioReserva> <http://www.w3.org/2000/01/rdf-schema#label> "fechaInicioReserva" .
+# 
+# https://w3id.org/def/vtcom#licenciaTurística
+<https://w3id.org/def/vtcom#licenciaTurística> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#licenciaTurística> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<https://w3id.org/def/vtcom#licenciaTurística> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtcom#licenciaTurística> <http://purl.org/dc/elements/1.1/description> "Número de registro de la Vivienda." .
+<https://w3id.org/def/vtcom#licenciaTurística> <http://www.w3.org/2000/01/rdf-schema#label> "licenciaTurística" .
+# 
+# https://w3id.org/def/vtcom#númHabitacionesBúsqueda
+<https://w3id.org/def/vtcom#númHabitacionesBúsqueda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#númHabitacionesBúsqueda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom#númHabitacionesBúsqueda> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://w3id.org/def/vtcom#númHabitacionesBúsqueda> <http://purl.org/dc/elements/1.1/description> "Número de habitaciones para las que el cliente busca alojamiento." .
+<https://w3id.org/def/vtcom#númHabitacionesBúsqueda> <http://www.w3.org/2000/01/rdf-schema#label> "númHabitacionesBúsqueda" .
+# 
+# https://w3id.org/def/vtcom#númHabitacionesReserva
+<https://w3id.org/def/vtcom#númHabitacionesReserva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#númHabitacionesReserva> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#númHabitacionesReserva> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://w3id.org/def/vtcom#númHabitacionesReserva> <http://purl.org/dc/elements/1.1/description> "Número de habitaciones reservadas por el Cliente." .
+<https://w3id.org/def/vtcom#númHabitacionesReserva> <http://www.w3.org/2000/01/rdf-schema#label> "númHabitacionesReserva" .
+# 
+# https://w3id.org/def/vtcom#númPersonasBúsqueda
+<https://w3id.org/def/vtcom#númPersonasBúsqueda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#númPersonasBúsqueda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom#númPersonasBúsqueda> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://w3id.org/def/vtcom#númPersonasBúsqueda> <http://purl.org/dc/elements/1.1/description> "Número de personas para las que el cliente busca alojamiento." .
+<https://w3id.org/def/vtcom#númPersonasBúsqueda> <http://www.w3.org/2000/01/rdf-schema#label> "númPersonasBúsqueda" .
+# 
+# https://w3id.org/def/vtcom#númPersonasReserva
+<https://w3id.org/def/vtcom#númPersonasReserva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#númPersonasReserva> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónReserva> .
+<https://w3id.org/def/vtcom#númPersonasReserva> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://w3id.org/def/vtcom#númPersonasReserva> <http://purl.org/dc/elements/1.1/description> "Número de personas que se alojarán junto al cliente." .
+<https://w3id.org/def/vtcom#númPersonasReserva> <http://www.w3.org/2000/01/rdf-schema#label> "númPersonasReserva" .
+# 
+# https://w3id.org/def/vtcom#tamañoBaño
+<https://w3id.org/def/vtcom#tamañoBaño> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#tamañoBaño> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Baño> .
+<https://w3id.org/def/vtcom#tamañoBaño> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://w3id.org/def/vtcom#tamañoBaño> <http://purl.org/dc/elements/1.1/description> "Tamaño del baño: 2,3,4 metros cuadrados." .
+<https://w3id.org/def/vtcom#tamañoBaño> <http://www.w3.org/2000/01/rdf-schema#label> "tamañoBaño" .
+# 
+# https://w3id.org/def/vtcom#tamañoCama
+<https://w3id.org/def/vtcom#tamañoCama> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#tamañoCama> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Cama> .
+<https://w3id.org/def/vtcom#tamañoCama> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtcom#tamañoCama> <http://purl.org/dc/elements/1.1/description> "Tamaño de la cama: 90,135,160." .
+<https://w3id.org/def/vtcom#tamañoCama> <http://www.w3.org/2000/01/rdf-schema#label> "tamañoCama" .
+# 
+# https://w3id.org/def/vtcom#tamañoHabitación
+<https://w3id.org/def/vtcom#tamañoHabitación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#tamañoHabitación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Habitación> .
+<https://w3id.org/def/vtcom#tamañoHabitación> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://w3id.org/def/vtcom#tamañoHabitación> <http://purl.org/dc/elements/1.1/description> "Tamaño de la Habitación." .
+<https://w3id.org/def/vtcom#tamañoHabitación> <http://www.w3.org/2000/01/rdf-schema#label> "tamañoHabitación" .
+# 
+# https://w3id.org/def/vtcom#tamañoPlaza
+<https://w3id.org/def/vtcom#tamañoPlaza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#tamañoPlaza> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#PlazaParking> .
+<https://w3id.org/def/vtcom#tamañoPlaza> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://w3id.org/def/vtcom#tamañoPlaza> <http://purl.org/dc/elements/1.1/description> "Tamaño de la plaza:2,3,4 metros cuadrados." .
+<https://w3id.org/def/vtcom#tamañoPlaza> <http://www.w3.org/2000/01/rdf-schema#label> "tamañoPlaza" .
+# 
+# https://w3id.org/def/vtcom#tieneMascotas
+<https://w3id.org/def/vtcom#tieneMascotas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#tieneMascotas> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#RelaciónBúsqueda> .
+<https://w3id.org/def/vtcom#tieneMascotas> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/vtcom#tieneMascotas> <http://purl.org/dc/elements/1.1/description> "El cliente indica en la búsqueda de Vivienda si tiene o no mascotas." .
+<https://w3id.org/def/vtcom#tieneMascotas> <http://www.w3.org/2000/01/rdf-schema#label> "tieneMascotas" .
+# 
+# https://w3id.org/def/vtcom#tipoBaño
+<https://w3id.org/def/vtcom#tipoBaño> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#tipoBaño> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Baño> .
+<https://w3id.org/def/vtcom#tipoBaño> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtcom#tipoBaño> <http://purl.org/dc/elements/1.1/description> "Aseo, Baño con ducha, Baño con bañera." .
+<https://w3id.org/def/vtcom#tipoBaño> <http://www.w3.org/2000/01/rdf-schema#label> "tipoBaño" .
+# 
+# https://w3id.org/def/vtcom#tipoCama
+<https://w3id.org/def/vtcom#tipoCama> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#tipoCama> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Cama> .
+<https://w3id.org/def/vtcom#tipoCama> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtcom#tipoCama> <http://purl.org/dc/elements/1.1/description> "Individual, Doble, Sofá-cama." .
+<https://w3id.org/def/vtcom#tipoCama> <http://www.w3.org/2000/01/rdf-schema#label> "tipoCama" .
+# 
+# https://w3id.org/def/vtcom#tipoHabitación
+<https://w3id.org/def/vtcom#tipoHabitación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#tipoHabitación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#Habitación> .
+<https://w3id.org/def/vtcom#tipoHabitación> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtcom#tipoHabitación> <http://purl.org/dc/elements/1.1/description> "Individual, Doble, Suite." .
+<https://w3id.org/def/vtcom#tipoHabitación> <http://www.w3.org/2000/01/rdf-schema#label> "tipoHabitación" .
+# 
+# https://w3id.org/def/vtcom#tipoPlaza
+<https://w3id.org/def/vtcom#tipoPlaza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtcom#tipoPlaza> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtcom#PlazaParking> .
+<https://w3id.org/def/vtcom#tipoPlaza> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtcom#tipoPlaza> <http://www.w3.org/2000/01/rdf-schema#label> "tipoPlaza" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/acco/ns#AccomodationFeature
+<http://purl.org/acco/ns#AccomodationFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/acco/ns#AccomodationFeature> <http://www.w3.org/2000/01/rdf-schema#label> "acco:AccomodationFeature" .
+# 
+# http://purl.org/acco/ns#Apartment
+<http://purl.org/acco/ns#Apartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/acco/ns#Apartment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<http://purl.org/acco/ns#Apartment> <http://www.w3.org/2000/01/rdf-schema#label> "acco:Apartment" .
+# 
+# http://purl.org/acco/ns#House
+<http://purl.org/acco/ns#House> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/acco/ns#House> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> .
+<http://purl.org/acco/ns#House> <http://www.w3.org/2000/01/rdf-schema#label> "acco:House" .
+# 
+# http://schema.org/address
+<http://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "schema:address" .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#Point
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "geo:Point" .
+# 
+# http://www.w3.org/2006/time#Duration
+<http://www.w3.org/2006/time#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Duration> <http://www.w3.org/2000/01/rdf-schema#label> "time:Duration" .
+# 
+# https://schema.org/PriceSpecification
+<https://schema.org/PriceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "schema:PriceSpecification" .
+# 
+# https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esdir:DirecciónPostal
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esdir:DirecciónPostal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esdir:DirecciónPostal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/address> .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esdir:DirecciónPostal> <http://purl.org/dc/elements/1.1/description> "Describe una dirección postal de España." .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esdir:DirecciónPostal> <http://www.w3.org/2000/01/rdf-schema#label> "DirecciónPostal" .
+# 
+# https://w3id.org/def/vt#Gestor
+<https://w3id.org/def/vt#Gestor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#Gestor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#Gestor> <http://purl.org/dc/elements/1.1/description> "Representa al sujeto (persona física o jurídica) que explota\ncomercialmente la vivienda. Propietario y Gestor firman\nun contrato de servicios que recoge los términos de su relación." .
+<https://w3id.org/def/vt#Gestor> <http://www.w3.org/2000/01/rdf-schema#label> "Gestor" .
+# 
+# https://w3id.org/def/vt#Persona
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/def/vt#Persona> <http://purl.org/dc/elements/1.1/description> "Representa al sujeto (persona física o jurídica) que alquila\nuna vivienda turística." .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#label> "Persona" .
+# 
+# https://w3id.org/def/vt#Propietario
+<https://w3id.org/def/vt#Propietario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#Propietario> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#Propietario> <http://purl.org/dc/elements/1.1/description> "Representa al sujeto (persona física o jurídica) que posee\nla vivienda." .
+<https://w3id.org/def/vt#Propietario> <http://www.w3.org/2000/01/rdf-schema#label> "Propietario" .
+# 
+# https://w3id.org/def/vt#ViviendaTurística
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#label> "ViviendaTurística" .
+# 
+# https://w3id.org/def/vtcom#Baño
+<https://w3id.org/def/vtcom#Baño> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtcom#Baño> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtcom#tipoBaño> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtcom#Baño> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtcom#tamañoBaño> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtcom#Baño> <http://purl.org/dc/elements/1.1/description> "Una Vivienda Turística dispone de un número de baños de distintos tipos y tamaños." .
+<https://w3id.org/def/vtcom#Baño> <http://www.w3.org/2000/01/rdf-schema#label> "Baño" .
+# 
+# https://w3id.org/def/vtcom#Cama
+<https://w3id.org/def/vtcom#Cama> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtcom#Cama> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtcom#tamañoCama> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtcom#Cama> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtcom#tipoCama> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtcom#Cama> <http://purl.org/dc/elements/1.1/description> "Una habitación de una Vivienda Turística dispone de un número de camas." .
+<https://w3id.org/def/vtcom#Cama> <http://www.w3.org/2000/01/rdf-schema#label> "Cama" .
+# 
+# https://w3id.org/def/vtcom#Cliente
+<https://w3id.org/def/vtcom#Cliente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtcom#Cliente> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vtcom#Cliente> <http://purl.org/dc/elements/1.1/description> "Representa al sujeto (persona física o jurídica) que alquila\nuna vivienda turística." .
+<https://w3id.org/def/vtcom#Cliente> <http://www.w3.org/2000/01/rdf-schema#label> "Cliente" .
+# 
+# https://w3id.org/def/vtcom#Habitación
+<https://w3id.org/def/vtcom#Habitación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtcom#Habitación> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtcom#tamañoHabitación> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtcom#Habitación> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtcom#tipoHabitación> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtcom#Habitación> <http://purl.org/dc/elements/1.1/description> "Una Vivienda Turística dispone de un número de habitaciones de distintos tipos y tamaños." .
+<https://w3id.org/def/vtcom#Habitación> <http://www.w3.org/2000/01/rdf-schema#label> "Habitación" .
+# 
+# https://w3id.org/def/vtcom#Parking
+<https://w3id.org/def/vtcom#Parking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtcom#Parking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtcom#tamañoPlaza> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtcom#Parking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtcom#tipoPlaza> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtcom#Parking> <http://purl.org/dc/elements/1.1/description> "Una Vivienda Turística dispone o no de garaje." .
+<https://w3id.org/def/vtcom#Parking> <http://www.w3.org/2000/01/rdf-schema#label> "Parking" .
+# 
+# https://w3id.org/def/vtcom#PlazaParking
+<https://w3id.org/def/vtcom#PlazaParking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtcom#PlazaParking> <http://purl.org/dc/elements/1.1/description> "Una Vivienda Turística con Parking dispone de un número de plazas de un tipo y tamaño." .
+<https://w3id.org/def/vtcom#PlazaParking> <http://www.w3.org/2000/01/rdf-schema#label> "PlazaParking" .
+# 
+# https://w3id.org/def/vtcom#RelaciónBúsqueda
+<https://w3id.org/def/vtcom#RelaciónBúsqueda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtcom#RelaciónBúsqueda> <http://purl.org/dc/elements/1.1/description> "Relación n-aria entre un Cliente y una Vivienda Turística con objeto de localizar una vivienda que satidfaga las necesidades del cliente." .
+<https://w3id.org/def/vtcom#RelaciónBúsqueda> <http://www.w3.org/2000/01/rdf-schema#label> "RelaciónBúsqueda" .
+# 
+# https://w3id.org/def/vtcom#RelaciónOferta
+<https://w3id.org/def/vtcom#RelaciónOferta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtcom#RelaciónOferta> <http://purl.org/dc/elements/1.1/description> "Relación n-aria entre un Gestor, un Cliente y una Vivienda Turística que permite al Gestor ofertar ua Vivienda a los clientes." .
+<https://w3id.org/def/vtcom#RelaciónOferta> <http://www.w3.org/2000/01/rdf-schema#label> "RelaciónOferta" .
+# 
+# https://w3id.org/def/vtcom#RelaciónReserva
+<https://w3id.org/def/vtcom#RelaciónReserva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtcom#RelaciónReserva> <http://purl.org/dc/elements/1.1/description> "Relación n-aria entre un Cliente, un Gestor y una Vivienda Turística que permite que un cliente reserve una vivienda turística para pasar sus vacaciones." .
+<https://w3id.org/def/vtcom#RelaciónReserva> <http://www.w3.org/2000/01/rdf-schema#label> "RelaciónReserva" .
+# 
+# https://w3id.org/def/vtcom#ViviendaAlquilerTurístico
+<https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtcom#licenciaTurística> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> <http://purl.org/dc/elements/1.1/description> "Representa el establecimiento objeto de alquiler que posee\nuna licencia turística." .
+<https://w3id.org/def/vtcom#ViviendaAlquilerTurístico> <http://www.w3.org/2000/01/rdf-schema#label> "ViviendaAlquilerTurístico" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/vtcom#LUGARESCERCANOS
+<https://w3id.org/def/vtcom#LUGARESCERCANOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtcom#LUGARESCERCANOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/acco/ns#AccomodationFeature> .
+# 
+# https://w3id.org/def/vtcom#MASCOTAS
+<https://w3id.org/def/vtcom#MASCOTAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtcom#MASCOTAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/acco/ns#AccomodationFeature> .
+# 
+# https://w3id.org/def/vtcom#PADDEL
+<https://w3id.org/def/vtcom#PADDEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtcom#PADDEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/acco/ns#AccomodationFeature> .
+# 
+# https://w3id.org/def/vtcom#PARQUEINFANTIL
+<https://w3id.org/def/vtcom#PARQUEINFANTIL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtcom#PARQUEINFANTIL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/acco/ns#AccomodationFeature> .
+# 
+# https://w3id.org/def/vtcom#PISCINA
+<https://w3id.org/def/vtcom#PISCINA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtcom#PISCINA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/acco/ns#AccomodationFeature> .
+# 
+# https://w3id.org/def/vtcom#VISTASMAR
+<https://w3id.org/def/vtcom#VISTASMAR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtcom#VISTASMAR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/acco/ns#AccomodationFeature> .
+# 
+# https://w3id.org/def/vtcom#WI-FI
+<https://w3id.org/def/vtcom#WI-FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtcom#WI-FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/acco/ns#AccomodationFeature> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
